@@ -5,10 +5,11 @@ default_walking_speed = 5
 default_running_speed = 8
 
 class Character:
-	def __init__(self, position, size, sprite):
+	def __init__(self, position, size, sprite, health):
 		self.position = position
 		self.size = size
 		self.sprite = sprite
+		self.health = health
 		self.vx = 0
 		self.vy = 0
 	def move(self, terrain, direction, speed):
@@ -22,6 +23,9 @@ class Character:
 	def draw(self):
 		fill(.55, .21, 1.0)
 		rect(self.position.x, self.position.y, self.size.w, self.size.h)
+		
+class Item (object):
+	pass
 		
 class Player (Character):
 	pass
